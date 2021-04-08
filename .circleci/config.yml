@@ -12,7 +12,7 @@ jobs:
       - checkout
       # Download and cache dependencies
       - run:
-         command: ls /home/circleci/MicroserviceAPI/project-ml-microservice-kubernetes/
+         command: ls -l
       - restore_cache:
           keys:
            
