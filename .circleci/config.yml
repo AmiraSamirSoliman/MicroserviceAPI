@@ -11,10 +11,12 @@ jobs:
     steps:
       - checkout
       # Download and cache dependencies
+      - run:
+         command: ls /home/circleci/MicroserviceAPI/project-ml-microservice-kubernetes/
       - restore_cache:
           keys:
            
-            - v1-dependencies-{{ checksum "~/MicroserviceAPI/project-ml-microservice-kubernetes/requirements.txt" }}
+            - v1-dependencies-{{ checksum "requirements.txt" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
