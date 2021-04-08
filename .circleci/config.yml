@@ -12,7 +12,7 @@ jobs:
       - checkout
       # Download and cache dependencies
       - run:
-         command: ls -l
+         command:  cd ./project-ml-microservice-kubernetes
       - restore_cache:
           keys:
            
