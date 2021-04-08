@@ -1,0 +1,49 @@
+{
+  "homebrew_version": "3.0.10-100-g1fa9a6b",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": false,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+    "INSTALL_RECEIPT.json"
+  ],
+  "time": null,
+  "source_modified_time": 1617283640,
+  "compiler": "gcc-5",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+    {
+      "full_name": "xz",
+      "version": "5.2.5"
+    },
+    {
+      "full_name": "gmp",
+      "version": "6.2.1"
+    }
+  ],
+  "source": {
+    "path": "@@HOMEBREW_LIBRARY@@/Taps/homebrew/homebrew-core/Formula/hadolint.rb",
+    "tap": "homebrew/core",
+    "tap_git_head": "6cbe8e67e300f07ac7b122debcf509d112a16cfe",
+    "spec": "stable",
+    "versions": {
+      "stable": "2.1.0",
+      "head": "",
+      "version_scheme": 0
+    }
+  },
+  "arch": "x86_64",
+  "built_on": {
+    "os": "Linux",
+    "os_version": "Ubuntu 16.04.7 LTS",
+    "cpu_family": "broadwell"
+  }
+}

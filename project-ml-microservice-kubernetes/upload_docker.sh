@@ -5,11 +5,16 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+# dockerpath=amirasoliman89/microserviceapi
+export dockerpath="amirasoliman89/microserviceapi:microserviceapi"
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+docker login --username amirasoliman89  --password amirasoliman89
+docker tag microserviceapi amirasoliman89/microserviceapi:microserviceapi
+echo "Docker ID and Image: $dockerpath" 
 
 # Step 3:
 # Push image to a docker repository
+#docker push $dockerpath
+docker push amirasoliman89/microserviceapi:microserviceapi
