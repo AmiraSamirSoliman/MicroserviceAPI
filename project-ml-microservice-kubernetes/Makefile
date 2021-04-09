@@ -27,7 +27,7 @@ lint:
 	 wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
          chmod +x /bin/hadolint
 	# chmod 777 /bin/hadolint
-	 ./hadolint Dockerfile
+	 hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203 app.py
