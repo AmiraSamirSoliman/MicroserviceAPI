@@ -38,7 +38,6 @@ jobs:
           name: run lint
           command: |
             cd ./project-ml-microservice-kubernetes/
-            
-            python3 -m pip install pylint --no-cache-dir
-        
+            pip install --upgrade pip && python3 -m pip install pylint --no-cache-dir
+    
             make lint 
