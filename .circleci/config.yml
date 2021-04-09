@@ -38,5 +38,6 @@ jobs:
           name: run lint
           command: |
             cd ./project-ml-microservice-kubernetes/
+            apt-get update
             apt-get install pylint
             make lint 
