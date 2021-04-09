@@ -1,6 +1,6 @@
 
  
- !/usr/bin/env bash
+ #!/usr/bin/env bash
 
  # This tags and uploads an image to Docker Hub
 
@@ -20,6 +20,8 @@
 
  # Step 3:
  # List kubernetes pods
+ sudo snap install kubectl --classic
+ minikube start --driver=virtualbox
  kubectl get pods
 
  # Step 4:
