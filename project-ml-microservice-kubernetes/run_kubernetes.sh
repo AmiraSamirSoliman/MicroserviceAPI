@@ -20,6 +20,8 @@
 
  # Step 3:
  # List kubernetes pods
+ sudo snap install kubectl --classic
+ minikube start --driver=virtualbox
  kubectl get pods
 
  # Step 4:
