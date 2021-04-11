@@ -1,6 +1,6 @@
 
  
- !/usr/bin/env bash
+ #!/usr/bin/env bash
 
  # This tags and uploads an image to Docker Hub
 
@@ -8,7 +8,7 @@
  # This is your Docker ID/path
  # dockerpath=<>
  #dockerpath='amirasoliman89/microserviceapi:latest'
- dockerpath='amirasoliman89/microserviceapi:microserviceapi'
+ dockerpath='amirasoliman89/microserviceapi:latest'
 
 
  # Step 2

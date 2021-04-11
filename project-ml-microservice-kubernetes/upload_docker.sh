@@ -17,4 +17,4 @@ echo "Docker ID and Image: $dockerpath"
 # Step 3:
 # Push image to a docker repository
 #docker push $dockerpath
-docker push amirasoliman89/microserviceapi:microserviceapi
+docker push  amirasoliman89/microserviceapi:microserviceapi
