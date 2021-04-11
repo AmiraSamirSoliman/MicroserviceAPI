@@ -24,18 +24,12 @@ test:
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	#
-<<<<<<< HEAD
         
 	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
 	     sudo    chmod +x /bin/hadolint
 	
 	hadolint Dockerfile
-=======
-	 wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-         chmod +x /bin/hadolint
-	# chmod 777 /bin/hadolint
-	 hadolint Dockerfile
->>>>>>> b6e873d543b93dad66fc234dcab8ef5d63f871ca
+
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203 app.py
