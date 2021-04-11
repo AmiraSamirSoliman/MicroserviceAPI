@@ -17,7 +17,7 @@ COPY model_data /app/model_data
 
 RUN pip install --no-cache-dir pip==21.0.1  && \
 #pip install certifi && \
- pip install --trusted-host=pypi.org --no-cache-dir pypi.python.org -r requirements.txt    
+ pip install -r requirements.txt    
 #pip install -r requirements.txt
     #pip install --requirement -r requirements.txt
 
