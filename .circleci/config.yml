@@ -72,10 +72,11 @@ jobs:
              make lint
 
   kubernetes :
-      docker:
+     executor: aws-eks/python3
+     # docker:
             # Docker image here that supports AWS CLI
-      - image: circleci/aws-eks@1.0.3
-      steps:
+      #- image: circleci/aws-eks@1.0.3
+     steps:
             # Checkout code from git
             - checkout
             - aws-cli/setup
