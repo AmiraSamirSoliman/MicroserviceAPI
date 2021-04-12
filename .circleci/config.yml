@@ -28,6 +28,7 @@ jobs:
       - run:
          name: make install
          command: |
+           cd ./project-ml-microservice-kubernetes
            make install
       #- run:   
          # cd ./projct-ml-microservice-kubernetes
