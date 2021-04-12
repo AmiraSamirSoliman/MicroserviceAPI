@@ -12,11 +12,11 @@ version: 2.1
 jobs:
   docker-steps:
       executor: docker/docker
-      working_directory: ~/project-ml-microservice-kubernetes
+      
       steps:
       - run:
          command: |
-           pwd 
+           cd project-ml-microservice-kubernetes
            ls -la
            ./upload_docker.sh
            ./run_docker.sh
