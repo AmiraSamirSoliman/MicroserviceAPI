@@ -16,10 +16,13 @@ jobs:
       steps:
       - checkout
       - run:
+         name: setup local enviroment
          command: |
            python3 -m venv ~/.devops
            source ~/.devops/bin/activate
            pip install pylint
+           pip install --upgrade pip
+           pinp install black
            pip install pytest
            pip install ipython
            cd ./project-ml-microservice-kubernetes
