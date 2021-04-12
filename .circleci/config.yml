@@ -27,7 +27,7 @@ jobs:
          name: kubernetes
          command: |
            cd project-ml-microservice-kubernetes
-           sudo service docker status
+           service docker status
            #docker stack deploy --compose-file compose.yml mystack
             
 
