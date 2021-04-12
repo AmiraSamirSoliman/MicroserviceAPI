@@ -22,7 +22,7 @@ jobs:
            source ~/.devops/bin/activate
            pip install pylint
            pip install --upgrade pip
-           pinp install black
+           pip install black
            pip install pytest
            pip install ipython
       - run:
