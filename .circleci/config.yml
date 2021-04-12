@@ -17,8 +17,10 @@ jobs:
       - checkout
       - run:
          command: |
-          ./upload_docker.sh
-           ./run_docker.sh
+          pwd 
+          ls -la
+          #./upload_docker.sh
+           #./run_docker.sh
 
   build:
        docker:
