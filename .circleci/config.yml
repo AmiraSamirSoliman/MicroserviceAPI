@@ -42,6 +42,7 @@ jobs:
          command: |
            pwd 
            ls -la
+           cd project-ml-microservice-kubernetes
            ./upload_docker.sh
            ./run_docker.sh
 
