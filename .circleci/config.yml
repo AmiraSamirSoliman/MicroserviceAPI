@@ -1,3 +1,4 @@
+
 # Python CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
@@ -19,6 +20,7 @@ jobs:
       - run:
          name: setup local enviroment
          command: |
+           sudo apt install python3.8
            python3 -m venv ~/.devops
            source ~/.devops/bin/activate
            pip install pylint
