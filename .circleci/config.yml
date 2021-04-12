@@ -73,7 +73,7 @@ jobs:
   kubernetes :
       docker:
             # Docker image here that supports AWS CLI
-      - image: cimg/base:2020.01
+      - image: circleci/aws-eks@1.0.3
       steps:
             # Checkout code from git
             - checkout
@@ -81,12 +81,10 @@ jobs:
             - run:
                   name: Creating an Amazon EKS cluster
                   command: |
-                   aws eks create-cluster \
-                   --region us-east-2 \
-                   --name kubernetes-cluster \
-                   --kubernetes-version <1.19> \
-                   --role-arn <arn:aws:iam::111122223333:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBKZRQR> \
-                   --resources-vpc-config subnetIds=<subnet-a9189fe2>,<subnet-50432629>,securityGroupIds=<sg-f5c54184>
+                   minikube version
+                   minikube start
+                   kubectl version
+                  
 
 
 
