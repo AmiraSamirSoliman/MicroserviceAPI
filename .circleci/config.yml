@@ -18,59 +18,8 @@ jobs:
     steps:
       - checkout
       - run:
-         name: setup local enviroment
-         command: |
-           pip install python3.8
-           python3 -m venv ~/.devops
-           source ~/.devops/bin/activate
-           pip install pylint
-           pip install --upgrade pip
-           pip install black
-           pip install pytest
-           pip install ipython
-      - run:
-         name: make install
-         command: |
-           cd ./project-ml-microservice-kubernetes
-           make install
-      - run: 
-         name: make lint
-         command : |
-             cd ./project-ml-microservice-kubernetes/
-             pip install --upgrade pip && python3 -m pip install pylint --no-cache-dir
-             pip install -r requirements.txt
-             make lint
-      - run:   
-         name: install docker
-         command: |
-            cd project-ml-microservice-kubernetes
-
-            sudo apt-get update
-
-            sudo apt-get install \
-            apt-transport-https \
-            ca-certificates \
-            curl \
-            gnupg \
-            lsb-release
-            
-            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-  
-             sudo apt remove docker docker-engine docker.io  
-             sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg
-             curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - 
-             sudo apt-key fingerprint 0EBFCD88
-             sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
-             sudo apt-get update
-             sudo apt-get install docker-ce docker-ce-cli containerd.io
-             #apt-cache madison docker-ce
-             #apt-cache madison docker-ce-cli
-             sudo apt-get install docker-ce=5:20.10.6~3-0~debian-buster docker-ce-cli=5:20.10.6~3-0~debian-buster containerd.io
-       
-             #sudo service docker restart
-             #sudo service docker status
-             #sudo systemctl restart ssh.service
-             #sudo docker run hello-world
+         name: docker
+         command:
             ./upload_docker.sh
             ./run_docker.sh
 
