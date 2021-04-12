@@ -17,8 +17,8 @@ jobs:
       - run:
          command: |
            pwd
-           ./upload_docker.sh
-           ./run_docker.sh
+           ./home/circleci/upload_docker.sh
+           ./home/circleci/run_docker.sh
 
   build:
        docker:
