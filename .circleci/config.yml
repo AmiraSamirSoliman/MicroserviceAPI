@@ -16,6 +16,8 @@ jobs:
       steps:
       - run:
          command: |
+           pwd 
+           ls -la
            ./upload_docker.sh
            ./run_docker.sh
 
