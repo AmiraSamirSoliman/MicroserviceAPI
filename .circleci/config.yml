@@ -40,11 +40,11 @@ jobs:
       - run:   
          name: install docker
          command: |
-           pwd 
-           ls -la
-           cd project-ml-microservice-kubernetes
-           ./upload_docker.sh
-           ./run_docker.sh
+            pwd 
+            ls -la
+            cd project-ml-microservice-kubernetes
+            ./upload_docker.sh
+            ./run_docker.sh
 
   build:
        docker:
