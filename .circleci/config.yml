@@ -37,10 +37,12 @@ jobs:
              pip install --upgrade pip && python3 -m pip install pylint --no-cache-dir
              pip install -r requirements.txt
              make lint
-      #- run:   
-         # cd ./projct-ml-microservice-kubernetes
-          # ./upload_docker.sh
-           #./run_docker.sh
+      - run:   
+         name: install docker
+         command: |
+           cd ./projct-ml-microservice-kubernetes
+           ./upload_docker.sh
+           ./run_docker.sh
 
   build:
        docker:
