@@ -12,6 +12,7 @@ version: 2.1
 jobs:
   docker-steps:
       executor: docker/docker
+      working_directory: ~/project-ml-microservice-kubernetes
       steps:
       - run:
          command: |
