@@ -65,9 +65,9 @@ jobs:
              sudo apt-get install docker-ce=5:20.10.6~3-0~debian-buster docker-ce-cli=5:20.10.6~3-0~debian-buster containerd.io
              #sudo apt-get install docker-ce=5:18.09.0~3-0~ubuntu-bionic docker-ce-cli=5:18.09.0~3-0~ubuntu-bionic containerd.io
              who
-             sudo usermod -aG docker $USER
-             sudo systemctl restart ssh.service
-             sudo docker run hello-world
+             #sudo usermod -aG docker $USER
+             #sudo systemctl restart ssh.service
+             #sudo docker run hello-world
             #./upload_docker.sh
             #./run_docker.sh
 
