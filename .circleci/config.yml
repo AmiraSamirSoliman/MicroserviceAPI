@@ -64,6 +64,7 @@ jobs:
              #apt-cache madison docker-ce-cli
              sudo apt-get install docker-ce=5:20.10.6~3-0~debian-buster docker-ce-cli=5:20.10.6~3-0~debian-buster containerd.io
              #sudo apt-get install docker-ce=5:18.09.0~3-0~ubuntu-bionic docker-ce-cli=5:18.09.0~3-0~ubuntu-bionic containerd.io
+             sudo service docker restart
              sudo service docker status
              #sudo systemctl restart ssh.service
              #sudo docker run hello-world
