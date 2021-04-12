@@ -25,10 +25,10 @@ lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	#
         
-	 wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-	         chmod +x /bin/hadolint
+	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+	         sudo chmod +x /bin/hadolint
 	
-	hadolint Dockerfile
+	sudo hadolint Dockerfile
 
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
