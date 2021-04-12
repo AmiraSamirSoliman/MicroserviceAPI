@@ -17,6 +17,8 @@ jobs:
       - checkout
       - run:
          command: |
+           python3 -m venv ~/.devops
+           source ~/.devops/bin/activate
            cd ./project-ml-microservice-kubernetes
            ./upload_docker.sh
            ./run_docker.sh
