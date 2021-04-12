@@ -72,23 +72,6 @@ jobs:
              pip install -r requirements.txt
              make lint
 
-  kubernetes :
-     executor: aws-eks/python3
-     # docker:
-            # Docker image here that supports AWS CLI
-      #- image: circleci/aws-eks@1.0.3
-     steps:
-            # Checkout code from git
-            - checkout
-            - aws-cli/setup
-            - run:
-                  name: Creating an Amazon EKS cluster
-                  command: |
-                   minikube version
-                   minikube start
-                   kubectl version
- 
-
   test-cluster:
     executor: aws-eks/python3
     parameters:
@@ -131,6 +114,6 @@ workflows:
     #jobs:
       #- docker-steps
       #- build
-      - kubernetes 
+      #- kubernetes 
         
 
