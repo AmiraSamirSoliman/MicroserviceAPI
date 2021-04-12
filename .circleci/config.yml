@@ -16,8 +16,6 @@ jobs:
       steps:
       - run:
          command: |
-           pwd
-           cd ./project-ml-microservice-kubernetes
            ./upload_docker.sh
            ./run_docker.sh
 
