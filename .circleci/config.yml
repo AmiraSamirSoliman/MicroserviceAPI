@@ -30,6 +30,13 @@ jobs:
          command: |
            cd ./project-ml-microservice-kubernetes
            make install
+      - run: 
+         name: make lint
+         command : |
+             cd ./project-ml-microservice-kubernetes/
+             pip install --upgrade pip && python3 -m pip install pylint --no-cache-dir
+             pip install -r requirements.txt
+             make lint
       #- run:   
          # cd ./projct-ml-microservice-kubernetes
           # ./upload_docker.sh
