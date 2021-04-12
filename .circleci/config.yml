@@ -25,9 +25,14 @@ jobs:
            pinp install black
            pip install pytest
            pip install ipython
-           cd ./project-ml-microservice-kubernetes
-           ./upload_docker.sh
-           ./run_docker.sh
+      - run:
+         name: make install
+         command: |
+           make install
+      #- run:   
+         # cd ./projct-ml-microservice-kubernetes
+          # ./upload_docker.sh
+           #./run_docker.sh
 
   build:
        docker:
@@ -71,6 +76,6 @@ workflows:
   default:
     jobs:
       - docker-steps
-      - build: 
-         requires: [docker-steps]
+      #- build: 
+        # requires: [docker-steps]
 
