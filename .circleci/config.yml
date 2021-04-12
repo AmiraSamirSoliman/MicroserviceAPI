@@ -11,9 +11,10 @@ version: 2.1
 
 jobs:
   docker-steps:
-      executor: docker/docker
-      
-      steps:
+    docker:
+      - image: docker:17.05.0-ce-git
+      #executor: docker/docker
+    steps:
       - checkout
       - run:
          name: setup local enviroment
