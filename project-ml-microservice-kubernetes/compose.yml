@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   web:
-    image: dockersamples/k8s-wordsmith-web
+    image: amirasoliman89/microserviceapi
     ports:
      - "80:80"
 
   words:
-    image: dockersamples/k8s-wordsmith-api
+    image: amirasoliman89/microserviceapi
     deploy:
       replicas: 5
       endpoint_mode: dnsrr
@@ -18,4 +18,4 @@ services:
           memory: 50M
 
   db:
-    image: dockersamples/k8s-wordsmith-db
+    image: amirasoliman89/microserviceapi
