@@ -14,13 +14,11 @@ jobs:
       executor: docker/docker
       
       steps:
+      - checkout
       - run:
          command: |
-           pwd
-           cd /home/circleci
-           ls -la 
-           ./home/circleci/upload_docker.sh
-           ./home/circleci/run_docker.sh
+          ./upload_docker.sh
+           ./run_docker.sh
 
   build:
        docker:
