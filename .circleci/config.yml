@@ -5,7 +5,6 @@
 #
 orbs:
   docker: circleci/docker@1.5.0
-  slack: circleci/slack@4.1.3
   aws-cli: circleci/aws-cli@1.3.0
 
 version: 2.1
@@ -71,10 +70,32 @@ jobs:
              pip install -r requirements.txt
              make lint
 
+  kubernetes :
+      docker:
+            # Docker image here that supports AWS CLI
+      - image: cimg/base:2020.01
+      steps:
+            # Checkout code from git
+            - checkout
+            - aws-cli/setup
+            - run:
+                  name: Creating an Amazon EKS cluster
+                  command: |
+                   aws eks create-cluster \
+                   --region us-east-2 \
+                   --name kubernetes-cluster \
+                   --kubernetes-version <1.19> \
+                   --role-arn <arn:aws:iam::111122223333:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBKZRQR> \
+                   --resources-vpc-config subnetIds=<subnet-a9189fe2>,<subnet-50432629>,securityGroupIds=<sg-f5c54184>
+
+
+
+
 workflows:
   default:
     jobs:
-      - docker-steps
-      #- build: 
-        # requires: [docker-steps]
+      #- docker-steps
+      #- build
+      - kubernetes 
+        
 
