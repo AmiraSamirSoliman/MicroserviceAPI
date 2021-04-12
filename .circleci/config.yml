@@ -17,10 +17,9 @@ jobs:
       - checkout
       - run:
          command: |
-          pwd 
-          ls -la
-          #./upload_docker.sh
-           #./run_docker.sh
+           cd ./project-ml-microservice-kubernetes
+           ./upload_docker.sh
+           ./run_docker.sh
 
   build:
        docker:
