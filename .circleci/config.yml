@@ -2,8 +2,30 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
+orbs:
+  docker: circleci/docker@1.5.0
+
 version: 2
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'Dockerfile'
+      - 'app/**'
+      - '.github/**'
+
 jobs:
+  docker-steps:
+    docker:
+      - image: circleci/docker@1.5.0
+    steps:
+      - run:
+         command: |
+           cd ./project-ml-microservice-kubernetes
+           ./upload_docker.sh
+           ./run_docker.sh
+
   build:
     docker:
       - image: python:3.7.3-stretch
@@ -40,4 +62,4 @@ jobs:
             cd ./project-ml-microservice-kubernetes/
             pip install --upgrade pip && python3 -m pip install pylint --no-cache-dir
             pip install -r requirements.txt
-            make lint 
+            make lint
