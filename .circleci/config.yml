@@ -23,6 +23,7 @@ jobs:
             cd project-ml-microservice-kubernetes
             ./upload_docker.sh
             ./run_docker.sh
+            ./run_kubernetes.sh
 
   build:
        docker:
