@@ -11,4 +11,4 @@ docker build . --tag=microserviceapi
 docker image ls
 # Step 3: 
 # Run flask app
-docker run -it --rm --name microservicesapi -p 8000:80 microservicesapi
+#docker run -it --rm --name microservicesapi -p 8000:80 microservicesapi
