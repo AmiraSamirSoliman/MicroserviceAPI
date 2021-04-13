@@ -24,8 +24,8 @@ jobs:
             cd project-ml-microservice-kubernetes
             ./upload_docker.sh
             ./run_docker.sh
-            service docker status
-            docker stack deploy --compose-file compose.yml mystack
+            #service docker status
+            #docker stack deploy --compose-file compose.yml mystack
       - run:
          name: kubernetes
          command: |
